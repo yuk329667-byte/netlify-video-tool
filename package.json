@@ -9,7 +9,13 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",
     "jsonwebtoken": "^9.0.2",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "name": "example",
+    "version": "1.0.0",
+    "dependencies": {
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2"
+   }
   },
   "devDependencies": {
     "netlify-cli": "^17.0.0"
