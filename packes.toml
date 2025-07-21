@@ -1,0 +1,59 @@
+# Netlify配置文件
+# 这个文件应该放在项目的根目录下
+
+[build]
+  # 构建命令
+  command = "npm run netlify-build"
+  # 发布目录
+  publish = "dist"
+  # 函数目录
+  functions = "netlify/functions"
+
+# 环境变量设置
+[build.environment]
+  # 设置Node版本
+  NODE_VERSION = "16"
+  # 启用Netlify的CI环境
+  CI = "true"
+  # 增加构建内存限制
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
+# 重定向设置
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 插件设置
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# 构建插件
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+
+# 缓存控制
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 特定路径的缓存控制
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# API路由处理
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# 开发设置
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 3000
+  publish = "dist"
+  autoLaunch = true
