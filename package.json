@@ -13,9 +13,10 @@
     "name": "example",
     "version": "1.0.0",
     "dependencies": {
-    "express": "^4.17.1",
-    "webpack": "5.88.2",
-    "fluent-ffmpeg": "^2.1.2"
+    "webpack": "5.89.0",
+    "ffmpeg-static": "5.1.0",
+    "fluent-ffmpeg": "2.0.0"
+  }
    }
   },
   "devDependencies": {
