@@ -13,10 +13,10 @@
   "dependencies": {
     "webpack": "^5.90.2",
     "webpack-cli": "^5.1.4",
-    "fluent-ffmpeg": "^2.1.2",
-    "ffmpeg-static": "^5.0.2",
     "@ffmpeg/ffmpeg": "^0.12.4",
     "@ffmpeg/core": "^0.12.2",
+    "ffmpeg-static": "^5.0.2",
+    "fluent-ffmpeg": "^2.1.2",
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "multer": "^1.4.5-lts.1",
