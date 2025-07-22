@@ -2,7 +2,7 @@ FROM node:16
 
 WORKDIR /app
 
-# 安装FFmpeg
+# 安装FFmpeg（已修复）
 RUN apt-get update && apt-get install -y ffmpeg
 
 # 复制package.json和package-lock.json
